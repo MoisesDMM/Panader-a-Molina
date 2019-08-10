@@ -199,14 +199,17 @@ body {
 
 #divs {
     position: relative;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    display: table;
+    margin: 5px 51px 95px;
+    flex: 1;
     padding-left: 5%;
     padding-top: 15%;
     padding-bottom: 15%;
-    top: 10%;
+    top: 37px;
     border: solid #F8FF00 3px;
-    width: 70%;
-    height: 70%;
+    /* width: 70%;
+    height: 70%; */
     border-radius: 25px;
 
     /* 235, 197, 28 */
@@ -216,6 +219,9 @@ body {
 
 .infogal {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: -101%;
     width: 100%;
@@ -225,31 +231,33 @@ body {
     transition: .5s;
 }
 
-#divs span.border {
-    position: absolute;
-    width: 40%;
-    height: 29%;
-    top: 15%;
-    left: 33%;
+#divs span.border{
+    position: relative;
+    width: 5em;
+    height: 5em;
+    top: -3em;
+    left: -0.3em;
+    margin: 0px auto; 
     display: block;
     transform: rotate(45deg);
     pointer-events: none;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.795);
-}
+  }
 
-#divs span.borders {
-    position: absolute;
-    width: 21%;
-    height: 29%;
-    top: 15%;
-    left: 41%;
+  #divs span.borders{
+    position: relative;
+    width: 5em;
+    height: 5em;
+    top: -2em;
+    left: 0em;
+    margin: 0px auto; 
     display: block;
     transform: rotate(45deg);
     pointer-events: none;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.795);
-}
+  }
 
 #divs span.border::before,
 #divs span.borders::before {
@@ -296,31 +304,35 @@ body {
 }
 
 #span-icon-shop {
-    position: absolute;
-    top: 20%;
-    left: 41%;
+    position: relative;
+    top: 0.4em;
+    left: -0.1em;
     font-size: 50px;
+    z-index: 1;
 }
 
 #span-icon-shops {
-    position: absolute;
-    top: 20%;
-    left: 45%;
+    position: relative;
+    top: -1.9em;
+    left: 1em;
     font-size: 50px;
+    z-index: 1;
 }
 
 #btnordenar {
-    position: absolute;
-    background-color: #3c32a4;
-    top: 60%;
-    right: 24%;
+    position: relative;
+    background-color: #007bff;
+    border-color: #007bff;
+    top: 1em;
+    right: 0.5em;
 }
 
 #btnordenars {
-    position: absolute;
-    background-color: #3c32a4;
-    top: 60%;
-    right: 35%;
+    position: relative;
+    top: 0.4em;
+    right: 1.5em;
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
 #galery:hover .infogal {
@@ -329,11 +341,46 @@ body {
 }
 
 /*Código responsive*/
-@media screen and(min-width:768px){
+@media screen and (min-width:320px) and (max-width:466px){
+    #divs {
+        top: 46px;
+    }
+    
+} 
+ @media screen and (min-width:768px) and
+(max-width:991px){
     #divs span.border {
-        width: 48%;
-        height: 25%;
-        top: 15%;
-        left: 27%;
+        width: 3em;
+        height: 3em;
+    }
+    
+    #btnordenars{
+        top: 1.2em;
+        left: -1.1em;
+    }
+    #divs{
+        margin: 5px 24px 95px;
+        top: 2.5em;
+        height: 10em;
+    }
+    #span-icon-shop {
+        top: -0.1em;
+        font-size: 33px;
+    }
+    #span-icon-shops{
+        top: -1.3em;
+        left: 1.5em;
+        font-size: 34px;
+    }
+    #divs span.borders{
+        width: 3.5em;
+        height: 3.5em;
+        top: 0em;
+        left: 0em;
+    }
+    #btnordenar {
+        top: -1em;
+        font-size: 11px;
+        padding: 5px;
     }
 }
